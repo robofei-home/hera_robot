@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_node_head">
+    <param name="port" value="/dev/head"/>
+  </node>
+
+  <node pkg="head" type="joint_state.py" name="head_joint_state"/>
+
+</launch>

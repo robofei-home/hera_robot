@@ -1,0 +1,1 @@
+controller_joint_names: ['wheelFL_joint', 'wheelFR_joint', 'wheelBL_joint', 'wheelBR_joint', 'xtion_joint', 'joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6', 'kinect_joint', 'head_joint', ]
