@@ -7,7 +7,7 @@
         xyz="-0.0378472205159159 -4.45763618397466E-08 0.342644249622605"
         rpy="0 0 0" />
       <mass
-        value="20" />
+        value="99.5369630102893" />
       <inertia
         ixx="0.044064230209152"
         ixy="1.30625532944847E-06"
@@ -521,7 +521,7 @@
   </link>
   <joint
     name="joint_1"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.0155 0 0.0465"
       rpy="0 0 0" />
@@ -532,6 +532,8 @@
     <axis
       xyz="0 0 1" />
     <limit
+      lower="-2.24"
+      upper="2.24"
       effort="10.6"
       velocity="5" />
   </joint>
@@ -577,10 +579,10 @@
   </link>
   <joint
     name="joint_2"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.048 0 0.0215"
-      rpy="3.1416 -0.8154 -3.1416" />
+      rpy="3.1416 -1.1781 -3.1416" />
     <parent
       link="link_1" />
     <child
@@ -588,6 +590,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
+      lower="-3.14"
+      upper="3.14"
       effort="10.6"
       velocity="5" />
   </joint>
@@ -633,7 +637,7 @@
   </link>
   <joint
     name="joint_3"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.14525 0 0"
       rpy="0 -5.5511E-17 -4.9304E-32" />
@@ -644,6 +648,8 @@
     <axis
       xyz="1 0 0" />
     <limit
+      lower="-2.24"
+      upper="2.24"
       effort="10.6"
       velocity="5" />
   </joint>
@@ -689,10 +695,10 @@
   </link>
   <joint
     name="joint_4"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.0215 0.0001535 -0.048"
-      rpy="8.3578E-18 -0.4681 -2.9674E-16" />
+      rpy="8.3578E-18 -0.3927 -2.9674E-16" />
     <parent
       link="link_3" />
     <child
@@ -700,6 +706,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
+      lower="-5.14"
+      upper="1.14"
       effort="10.6"
       velocity="5" />
   </joint>
@@ -745,10 +753,10 @@
   </link>
   <joint
     name="joint_5"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.14525 0 0"
-      rpy="-0.0090 1.4438E-31 -8.5251E-17" />
+      rpy="-1.4604E-16 1.4438E-31 -8.5251E-17" />
     <parent
       link="link_4" />
     <child
@@ -756,6 +764,8 @@
     <axis
       xyz="1 0 0" />
     <limit
+      lower="-2.24"
+      upper="2.24"
       effort="10.6"
       velocity="5" />
   </joint>
@@ -801,10 +811,10 @@
   </link>
   <joint
     name="joint_6"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.0375 0 0"
-      rpy="0 2.6196 0" />
+      rpy="0 2.6042E-31 0" />
     <parent
       link="link_5" />
     <child
@@ -812,6 +822,8 @@
     <axis
       xyz="0 -1 0" />
     <limit
+      lower="-3.14"
+      upper="3.14"
       effort="10.6"
       velocity="5" />
   </joint>
@@ -931,7 +943,7 @@
   </link>
   <joint
     name="kinect_joint"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="0.077635 0 0.99883"
       rpy="6.0338E-16 0 0" />
@@ -941,11 +953,11 @@
       link="kinect_link" />
     <axis
       xyz="0 1 0" />
-    <!-- <limit
+    <limit
       lower="0"
       upper="1.57"
       effort="3"
-      velocity="3" /> -->
+      velocity="3" />
   </joint>
   <link
     name="camera_link">
@@ -1042,7 +1054,7 @@
   </link>
   <joint
     name="head_joint"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="-0.0575 0 1.0193"
       rpy="0 0 1.2616E-16" />
@@ -1051,7 +1063,12 @@
     <child
       link="head_link" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
+    <limit
+      lower="-1.2"
+      upper="1.2"
+      effort="3"
+      velocity="3" />
   </joint>
   <gazebo>
     <plugin name="base_controller" filename="libgazebo_ros_planar_move.so">
