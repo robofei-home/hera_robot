@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="robot_model" default="hera_full"/>
+
+  <arg name="robot_name" 	default="robot"/>
+  <arg name="init_pos_x" 	default="0.0"/>
+  <arg name="init_pos_y" 	default="0.0"/>
+  <arg name="init_pos_z" 	default="0.0"/>
+  <arg name="init_yaw"   	default="0.0"/>
+
+  <arg name="use_jsp_gui" default="false"/>
+
+  <!-- load robot_description -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro $(find hera_description)/robots/$(arg robot_model).urdf.xacro"/>
+
+  <!-- Load joint controller configurations -->
+  <rosparam command="load" file="$(find hera_description)/config/yaml/hera_control.yaml"/>
+
+  <!-- publishers -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <group if="$(arg use_jsp_gui)" >
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+  </group>
+  <group unless="$(arg use_jsp_gui)" >
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen"
+      args="joint_state_controller"/>
+  </group>
+
+  <!-- spawn simulated robot -->
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+	args="-param robot_description
+	      -urdf
+	      -x $(arg init_pos_x)
+	      -y $(arg init_pos_y)
+	      -z $(arg init_pos_z)
+	      -Y $(arg init_yaw)
+	      -model $(arg robot_name)">
+  </node>
+
+</launch>
