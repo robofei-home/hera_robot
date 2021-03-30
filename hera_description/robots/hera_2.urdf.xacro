@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+
+<robot name="hera"
+       xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://ros.org/wiki/xacro" >
+
+  <!-- <xacro:arg name="prefix" default="" /> -->
+
+  <!-- ##################################################################### -->
+  <!-- ######################### includes ################################## -->
+  <!-- ##################################################################### -->
+
+  <!-- commons -->
+  <xacro:include filename="$(find hera_description)/urdf/commons.urdf.xacro" />
+
+  <!-- actuators -->
+  <xacro:include filename="$(find hera_description)/urdf/actuators/base.urdf.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/actuators/torso.urdf.xacro" />
+
+  <!-- sensors -->
+  <xacro:include filename="$(find hera_description)/urdf/sensors/hokuyo_utm.urdf.xacro"/>
+  <xacro:include filename="$(find hera_description)/urdf/sensors/hokuyo_urg.urdf.xacro"/>
+  <xacro:include filename="$(find hera_description)/urdf/sensors/asus_xtion.urdf.xacro"/>
+  <xacro:include filename="$(find hera_description)/urdf/sensors/kinect_one.urdf.xacro"/>
+
+  <!-- simulation -->
+  <xacro:include filename="$(find hera_description)/urdf/simulation/control.gazebo.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/simulation/base.gazebo.xacro"/>
+  <xacro:include filename="$(find hera_description)/urdf/simulation/hokuyo_utm.gazebo.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/simulation/hokuyo_urg.gazebo.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/simulation/asus_xtion.gazebo.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/simulation/kinect_one.gazebo.xacro" />
+
+<!-- ####################################################################### -->
+<!-- ######################## robot parts ################################## -->
+<!-- ####################################################################### -->
+
+  <!-- base -->
+  <xacro:base
+    name="base"/>
+
+  <!-- torso -->
+  <xacro:torso
+    name="torso"
+    parent="base"/>
+
+  <!-- base laser front -->
+  <xacro:hokuyo_utm
+    name="base_scan_front"
+    parent="base">
+    <origin xyz="0.3 0 0.01" rpy="0 0 0"/>
+  </xacro:hokuyo_utm>
+
+  <!-- base laser back -->
+  <xacro:hokuyo_urg
+    name="base_scan_back"
+    parent="base">
+    <origin xyz="-0.3 0 0.01" rpy="0 0 ${M_PI}"/>
+  </xacro:hokuyo_urg>
+
+  <!-- torso pointcloud front: xtion -->
+  <xacro:xtion
+    name="xtion"
+    parent="torso">
+    <origin xyz="0.1 0 -0.14" rpy="0 0 0" />
+  </xacro:xtion>
+
+  <!-- torso pointcloud front: kinect_one -->
+  <xacro:kinect_one
+    name="kinect_one"
+    parent="torso_sensor_plat">
+    <origin xyz="0.05 0 0.1" rpy="0 0 0" />
+  </xacro:kinect_one>
+
+
+<!-- ####################################################################### -->
+<!-- ####################### gazebo extensions ##############################-->
+<!-- ####################################################################### -->
+
+  <!-- base -->
+  <xacro:gazebo_base
+    reference="base"/>
+
+  <!-- hokuyo_utm -->
+  <xacro:gazebo_hokuyo_utm
+    reference="base_scan_front"
+    update_rate="10"
+    min_angle="-1.45"
+    max_angle="1.45"/>
+
+  <!-- hokuyo_urg -->
+  <xacro:gazebo_hokuyo_urg
+    reference="base_scan_back"
+    update_rate="10"
+    min_angle="-1.45"
+    max_angle="1.45" />
+
+  <!-- xtion -->
+  <xacro:gazebo_xtion
+    reference="xtion"
+    update_rate="10"/>
+
+  <!-- kinect_one -->
+  <xacro:gazebo_kinect_one
+    reference="kinect_one"
+    update_rate="10"/>
+
+</robot>

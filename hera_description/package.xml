@@ -1,21 +1,24 @@
-<package>
+<?xml version="1.0"?>
+<package format="2">
+
   <name>hera_description</name>
-  <version>1.0.0</version>
+  <version>0.1.0</version>
   <description>
-    <p>URDF Description package for hera_description</p>
-    <p>This package contains configuration data, 3D models and launch files
-for hera_description robot</p>
+    This package contains the URDF Description model and simulation of the [HERA robot (2020 version)](http://robofei.aquinno.com/athome/wp-content/uploads/2020/01/TDP2020ROBOFEI.pdf), developed by the [RoboFEI@home Team](http://robofei.aquinno.com/athome/) in the [FEI University Center](https://portal.fei.edu.br/).
   </description>
-  <author>me</author>
-  <maintainer email="me@email.com" />
+
+  <maintainer email="fagnerpimentel@gmail.com">Fagner Pimentel</maintainer>
+  <author email="fagnerpimentel@gmail.com">Fagner Pimentel</author>
+  <author email="williamyaguiu@gmail.com">William Yaguiu</author>
+  <url type="website">https://gitlab.com/fpimentel/hera/hera_description</url>
   <license>BSD</license>
+
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roslaunch</build_depend>
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>rviz</run_depend>
-  <run_depend>joint_state_publisher</run_depend>
-  <run_depend>gazebo</run_depend>
-  <export>
-    <architecture_independent />
-  </export>
+
+  <build_depend>roscpp</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+
+
+
 </package>
