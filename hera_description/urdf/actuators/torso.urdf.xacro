@@ -105,7 +105,7 @@
     </joint>
     <!-- should be revolute -->
     <joint name="joint_${name}to${name}_sensor_plat" type="revolute">
-      <origin xyz="0.09 0 0.46" rpy="0 ${55 *(M_PI/180)} 0"/> <!-- rpy="0 0 0" -->
+      <origin xyz="0.09 0 0.46" rpy="0 0 0"/> <!-- rpy="0 0 0" -->
       <parent link="${name}"/>
       <child link="${name}_sensor_plat"/>
       <axis xyz="0 1 0"/>
