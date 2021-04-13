@@ -78,6 +78,13 @@
           <mesh filename="package://hera_description/meshes/torso.stl"/>
         </geometry>
       </visual>
+      <collision>
+        <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+        <material name="dark_grey"/>
+        <geometry>
+          <mesh filename="package://hera_description/meshes/torso.stl"/>
+        </geometry>
+      </collision>
     </link>
 
     <!-- sensor plat -->
@@ -103,16 +110,16 @@
       <parent link="${parent}"/>
       <child link="${name}"/>
     </joint>
+
     <!-- should be revolute -->
-    <joint name="joint_${name}to${name}_sensor_plat" type="revolute">
+    <joint name="joint_${name}_to_${name}_sensor_plat" type="revolute">
       <origin xyz="0.09 0 0.46" rpy="0 0 0"/> <!-- rpy="0 0 0" -->
       <parent link="${name}"/>
       <child link="${name}_sensor_plat"/>
-      <axis xyz="0 1 0"/>
+      <axis xyz="0 1 0"/> -->
       <limit effort="${torso_sensor_plat_effort}" velocity="${torso_sensor_plat_velocity}"
-        lower="-1.0216" upper="-0.6592" />
+        lower="0.0" upper="1.57"/>
     </joint>
-
 
     <!-- <transmission name="tran_${name}_sensor_plat">
       <type>transmission_interface/SimpleTransmission</type>
@@ -126,4 +133,68 @@
     </transmission> -->
 
   </xacro:macro>
+
+
+  <!--suporte_link-->
+  <xacro:macro name="create_suporte_link" params="parent">
+    <link name="suporte_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://hera_description/meshes/manip_meshes/suporte_link.STL"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://hera_description/meshes/manip_meshes/suporte_link.STL"/>
+        </geometry>
+      </collision>
+      <xacro:inertial_suporte_link mass="0.659217140679788"/>
+    </link>
+
+    <!--suporte_joint--> 
+    <joint name="suporte_joint" type="fixed">
+      <origin xyz="0.04525 0 0.0285" rpy="0 0 0" />
+      <parent link="${parent}" />
+      <child link="suporte_link" />
+      <axis xyz="0 0 0" />
+      <limit lower="0" upper="0" effort="0" velocity="0" />
+    </joint>
+  </xacro:macro>
+
+  <!--encosto_link-->
+  <xacro:macro name="create_encosto_link" params="parent">
+    <link name="encosto_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://hera_description/meshes/manip_meshes/encosto_link.STL"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://hera_description/meshes/manip_meshes/encosto_link.STL"/>
+        </geometry>
+      </collision>
+      <xacro:inertial_base_link mass="0.0709912944888601"/>
+    </link>
+
+    <!--encosto_joint-->
+    <joint name="encosto_joint" type="fixed">
+      <origin xyz="0.028 0.0066709 0.053" rpy="0 0 0" />
+      <parent link="${parent}" />
+      <child link="encosto_link" />
+      <axis xyz="0 0 0" />
+      <limit effort="0" velocity="0" />
+    </joint>
+  </xacro:macro>
+
 </robot>
