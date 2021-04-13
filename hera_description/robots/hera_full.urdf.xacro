@@ -17,9 +17,9 @@
 
   <!-- actuators -->
   <xacro:include filename="$(find hera_description)/urdf/actuators/base.urdf.xacro" />
-  <xacro:include filename="/home/guilherme/ws_moveit/src/hera_description/urdf/actuators/torso.urdf.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/actuators/torso.urdf.xacro" />
   <xacro:include filename="$(find hera_description)/urdf/actuators/head.urdf.xacro" />
-  <xacro:include filename="/home/guilherme/ws_moveit/src/hera_description/urdf/actuators/manip.urdf.xacro" />
+  <xacro:include filename="$(find hera_description)/urdf/actuators/manip.urdf.xacro" />
 
   <!-- sensors -->
   <xacro:include filename="$(find hera_description)/urdf/sensors/hokuyo_utm.urdf.xacro"/>
