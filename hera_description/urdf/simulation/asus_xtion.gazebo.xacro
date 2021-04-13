@@ -14,8 +14,8 @@
             <horizontal_fov>${62.8 * M_PI/180.0}</horizontal_fov>
             <image>
               <format>R8G8B8</format>
-              <width>${640/20}</width>
-              <height>${480/20}</height>
+              <width>${640}</width>
+              <height>${480}</height>
             </image>
             <clip>
               <near>0.8</near>
