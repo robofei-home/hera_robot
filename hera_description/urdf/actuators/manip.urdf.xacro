@@ -2,6 +2,8 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hera_description">
 
 <xacro:include filename="$(find hera_description)/urdf/manip_prop.urdf.xacro"/>
+<xacro:include filename="$(find hera_description)/urdf/simulation/manip_transmission.xacro"/>
+<xacro:include filename="$(find hera_description)/urdf/actuators/gripper/robotiq-3f-gripper_articulated_macro.xacro"/>
 
 <!--base_link-->
   <xacro:macro name="create_base_link">
@@ -86,11 +88,11 @@
 
     <!--joint_2--> 
     <joint name="joint_2" type="revolute">
-      <origin xyz="0.048 0 0.02285" rpy="3.1416 -1.1781 -3.1416" />
+      <origin xyz="0.048 0 0.02285" rpy="3.1416 -2 -3.1416" />
       <parent link="link_1" />
       <child link="link_2" />
       <axis xyz="0 1 0" />
-      <limit lower="-1.0847" upper="3.14" effort="8" velocity="5" />
+      <limit lower="-2.355" upper="3.14" effort="8" velocity="5" />
     </joint>
   </xacro:macro>
 
@@ -193,7 +195,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh  filename="package://hera_description/meshes/manip_meshes/link_6.STL" />
+          <mesh  filename="package://hera_description/meshes/manip_meshes/link_6.STL" scale="0.1 0.1 0.1" />
         </geometry>
         <material name="dark_grey">
           <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -202,7 +204,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_6_col.STL" />
+          <mesh filename="package://hera_description/meshes/manip_meshes/link_6_col.STL" scale="0.1 0.1 0.1" />
         </geometry>
         </collision>
         <xacro:inertial_link_6 mass="0.482627734525522"/> 
@@ -215,128 +217,6 @@
       <child link="link_6" />
       <axis xyz="0 -1 0" />
       <limit lower="-2.6232" upper="1.8262" effort="8" velocity="5" />
-    </joint>
-  </xacro:macro>
-
-<!--link_7-->
-  <xacro:macro name="create_link_7">
-    <link name="link_7">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_7.STL"/>
-        </geometry>
-        <material name="dark_grey">
-          <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
-        </material>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_7_col.STL"/>
-        </geometry>
-      </collision>
-      <xacro:inertial_link_7 mass="0.0392347304267543"/>
-    </link>
-
-    <!-- joint 7 -->
-    <joint name="joint_7" type="revolute">
-      <origin xyz="0.061 0.02125 0" rpy="0 0 0" />
-      <parent link="link_6" />
-      <child  link="link_7" />
-      <axis xyz="0 0 1" />
-      <limit lower="-0.6454" upper="1.5600" effort="8" velocity="5" />
-    </joint>
-  </xacro:macro>
-
-<!--link_end7-->
-  <xacro:macro name="create_link_end7">
-    <link name="link_end7">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_end7.STL"/>
-        </geometry>
-        <material name="white">
-          <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
-        </material>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_end7.STL"/>
-        </geometry>
-      </collision>
-      <xacro:inertial_link_end7 mass="0.0535201883186937"/>
-    </link>
-
-    <!--joint_end7-->
-    <joint name="joint_end7" type="fixed">
-      <origin xyz="0.066179 -0.02125 0" rpy="0 0 0" />
-      <parent link="link_7" />
-      <child link="link_end7" />
-      <axis xyz="0 0 0" />
-    </joint>
-  </xacro:macro>
-
-<!--link_8-->
-  <xacro:macro name="create_link_8">
-    <link name="link_8">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_8.STL" />
-        </geometry>
-        <material name="dark_grey">
-          <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
-        </material>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_8_col.STL" />
-        </geometry>
-      </collision>
-      <xacro:inertial_link_8 mass="0.0392347308783591"/>
-    </link>
-
-    <!--joint_8--> 
-    <joint name="joint_8" type="revolute">
-      <origin xyz="0.061 -0.02125 0" rpy="0 0 0" />
-      <parent link="link_6" />
-      <child link="link_8" />
-      <axis xyz="0 0 1" />
-      <limit lower="-1.5600" upper="0.6454" effort="8" velocity="5" />
-    </joint>
-  </xacro:macro>
-
-<!--link_end8-->
-  <xacro:macro name="create_link_end8">
-    <link name="link_end8">
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_end8.STL" />
-        </geometry>
-        <material name="white">
-          <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
-        </material>
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://hera_description/meshes/manip_meshes/link_end8.STL" />
-        </geometry>
-      </collision>
-      <xacro:inertial_link_end8 mass="0.0535202013033793"/>
-    </link>
-
-    <!--joint_end8--> 
-    <joint name="joint_end8" type="fixed">
-      <origin xyz="0.0661786041848968 0.0212499999999973 0" rpy="0 0 0" />
-      <parent link="link_8" />
-      <child link="link_end8" />
-      <axis xyz="0 0 0" />
     </joint>
   </xacro:macro>
 
@@ -363,18 +243,13 @@
     <!--link_6-->
     <xacro:create_link_6/>
 
-    <!--link_7-->
-    <xacro:create_link_7/>
+    <!-- Gripper -->
+    <xacro:robotiq-3f-gripper_articulated prefix=""/>
 
-    <!--link_end7-->
-    <xacro:create_link_end7/>
+    <!--Transmission-->
+    <xacro:manip_transmission/>
 
-    <!--link_8-->
-    <xacro:create_link_8/>
-
-    <!--link_end8-->
-    <xacro:create_link_end8/>
-  
+    
   </xacro:macro>
 
 </robot>

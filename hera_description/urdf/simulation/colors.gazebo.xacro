@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+
+  <!-- manip colors -->
   <gazebo reference="base"><material>Gazebo/Black</material></gazebo>
   <gazebo reference="base_wheelFR"><material>Gazebo/White</material></gazebo>
   <gazebo reference="base_wheelFL"><material>Gazebo/White</material></gazebo>
@@ -9,5 +11,33 @@
   <gazebo reference="torso"><material>Gazebo/DarkGray</material></gazebo>
   <gazebo reference="torso_sensor_plat"><material>Gazebo/DarkGray</material></gazebo>
   <gazebo reference="head"><material>Gazebo/Gray</material></gazebo>
+
+  <!-- manip colors -->
+  <gazebo reference="base_link"><material>Gazebo/Gray</material></gazebo>
+  <gazebo reference="link_1"><material>Gazebo/Gray</material></gazebo>
+  <gazebo reference="link_2"><material>Gazebo/Gray</material></gazebo>
+  <gazebo reference="link_3"><material>Gazebo/Gray</material></gazebo>
+  <gazebo reference="link_4"><material>Gazebo/Gray</material></gazebo>
+  <gazebo reference="link_5"><material>Gazebo/Gray</material></gazebo>
+  <gazebo reference="link_6"><material>Gazebo/Gray</material></gazebo>
+
+  <gazebo reference="palm"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="tool0"><material>Gazebo/White</material></gazebo>
+
+
+  <gazebo reference="finger_1_link_0"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_1_link_1"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_1_link_2"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_1_link_3"><material>Gazebo/White</material></gazebo>
+
+  <gazebo reference="finger_2_link_0"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_2_link_1"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_2_link_2"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_2_link_3"><material>Gazebo/White</material></gazebo>
+
+  <gazebo reference="finger_middle_link_0"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_middle_link_1"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_middle_link_2"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="finger_middle_link_3"><material>Gazebo/White</material></gazebo>
 
 </robot>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+    
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- ros_control plugin -->
+    <xacro:macro name="gazebo_manip">
+        <gazebo>
+            <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/manip</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            </plugin>
+        </gazebo>
+    </xacro:macro>
+
+</robot>
