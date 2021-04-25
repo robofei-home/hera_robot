@@ -35,7 +35,7 @@
   <xacro:include filename="$(find hera_description)/urdf/simulation/hokuyo_urg.gazebo.xacro" />
   <xacro:include filename="$(find hera_description)/urdf/simulation/asus_xtion.gazebo.xacro" />
   <xacro:include filename="$(find hera_description)/urdf/simulation/kinect_one.gazebo.xacro" />
-
+  <xacro:include filename="$(find hera_description)/urdf/simulation/manip.gazebo.xacro" />
 <!-- ####################################################################### -->
 <!-- ######################## robot parts ################################## -->
 <!-- ####################################################################### -->
@@ -125,5 +125,8 @@
   <xacro:gazebo_kinect_one
     reference="kinect_one"
     update_rate="30"/>
+
+  <!-- manip_plugin -->
+  <xacro:gazebo_manip/>
 
 </robot>

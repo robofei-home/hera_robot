@@ -112,26 +112,26 @@
     </joint>
 
     <!-- should be revolute -->
-    <!-- should be revolute -->
-    <joint name="joint_${name}_to_${name}_sensor_plat" type="fixed">
+    <joint name="joint_${name}_to_${name}_sensor_plat" type="revolute">
       <origin xyz="0.09 0 0.46" rpy="0 0 0"/> <!-- rpy="0 0 0" -->
       <parent link="${name}"/>
       <child link="${name}_sensor_plat"/>
-      <!-- <axis xyz="0 1 0"/> -->
-      <!-- <limit effort="${torso_sensor_plat_effort}" velocity="${torso_sensor_plat_velocity}"
-        lower="0.0" upper="${M_PI/2}"/> -->
+      <axis xyz="0 1 0"/> -->
+      <limit effort="${torso_sensor_plat_effort}" velocity="${torso_sensor_plat_velocity}"
+        lower="0.0" upper="1.57"/>
     </joint>
 
-    <!-- <transmission name="tran_${name}_sensor_plat">
+    <!-- Transmission to Gazebo Plugin -->
+    <transmission name="trans_kinect">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="joint_${name}_to_${name}_sensor_plat">
+      <joint name="joint_torso_to_torso_sensor_plat">
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
-      <actuator name="motor_${name}_sensor_plat">
+      <actuator name="kinect_motor">
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
-    </transmission> -->
+    </transmission>
 
   </xacro:macro>
 
