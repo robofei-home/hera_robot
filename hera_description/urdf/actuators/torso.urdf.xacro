@@ -24,7 +24,7 @@
   <xacro:property name="pole_size_y"       value="0.06"/>
   <xacro:property name="pole_size_z"       value="1.00"/>
 
-  <xacro:property name="sensor_plat_mass"             value="0.0001"/>
+  <xacro:property name="sensor_plat_mass"             value="0.00001"/>
   <xacro:property name="sensor_plat_size_x"           value="0.10"/>
   <xacro:property name="sensor_plat_size_y"           value="0.12"/>
   <xacro:property name="sensor_plat_size_z"           value="0.01"/>

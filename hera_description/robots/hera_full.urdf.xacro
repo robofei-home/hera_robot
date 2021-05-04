@@ -76,11 +76,11 @@
   </xacro:xtion>
 
   <!-- torso pointcloud front: kinect_one -->
-  <!-- <xacro:kinect_one
+  <xacro:kinect_one
     name="kinect_one"
     parent="torso_sensor_plat">
     <origin xyz="0.05 0 0.1" rpy="0 0 0" />
-  </xacro:kinect_one> -->
+  </xacro:kinect_one>
 
   <!--torso suporte-->
   <xacro:create_suporte_link
