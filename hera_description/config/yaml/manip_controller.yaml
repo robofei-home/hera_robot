@@ -34,4 +34,3 @@ manip:
     type: effort_controllers/JointPositionController
     joint: joint_6
     pid: {p: 100.0, i: 1.0, d: 1.0}
-

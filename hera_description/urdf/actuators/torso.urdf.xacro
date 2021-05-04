@@ -15,8 +15,8 @@
   <xacro:property name="small_box_size_z"  value="0.30"/>
 
   <xacro:property name="head_plat_mass"    value="0.10"/>
-  <xacro:property name="head_plat_size_x"  value="0.35"/>
-  <xacro:property name="head_plat_size_y"  value="${base_size_y}"/>
+  <xacro:property name="head_plat_size_x"  value="0.25"/>
+  <xacro:property name="head_plat_size_y"  value="0.30"/>
   <xacro:property name="head_plat_size_z"  value="0.05"/>
 
   <xacro:property name="pole_mass"         value="0.20"/>
@@ -24,7 +24,7 @@
   <xacro:property name="pole_size_y"       value="0.06"/>
   <xacro:property name="pole_size_z"       value="1.00"/>
 
-  <xacro:property name="sensor_plat_mass"             value="0.01"/>
+  <xacro:property name="sensor_plat_mass"             value="0.0001"/>
   <xacro:property name="sensor_plat_size_x"           value="0.10"/>
   <xacro:property name="sensor_plat_size_y"           value="0.12"/>
   <xacro:property name="sensor_plat_size_z"           value="0.01"/>
@@ -50,13 +50,13 @@
         z="${small_box_size_z}">
         <origin xyz="0.15 0 -0.35" rpy="0 0 0"/>
       </xacro:create_box>
-      <xacro:create_box
+      <!-- <xacro:create_box
         m="${head_plat_mass}"
         x="${head_plat_size_x}"
         y="${head_plat_size_y}"
         z="${head_plat_size_z}">
-        <origin xyz="-0.06 0 0.475" rpy="0 0 0"/>
-      </xacro:create_box>
+        <origin xyz="-0.08 0 0.475" rpy="0 0 0"/>
+      </xacro:create_box> -->
       <xacro:create_box
         m="${pole_mass}"
         x="${pole_size_x}"
@@ -116,7 +116,7 @@
       <origin xyz="0.09 0 0.46" rpy="0 0 0"/> <!-- rpy="0 0 0" -->
       <parent link="${name}"/>
       <child link="${name}_sensor_plat"/>
-      <axis xyz="0 1 0"/> -->
+      <axis xyz="0 1 0"/> 
       <limit effort="${torso_sensor_plat_effort}" velocity="${torso_sensor_plat_velocity}"
         lower="0.0" upper="1.57"/>
     </joint>

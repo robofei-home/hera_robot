@@ -8,6 +8,7 @@
   <arg name="enable_gazebo"          default="true"/>
   <arg name="enable_teleop"          default="true"/>
   <arg name="enable_check_collision" default="true"/>
+  
 
   <!-- use rviz -->
   <group if="$(arg enable_rviz)">
