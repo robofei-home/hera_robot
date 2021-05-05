@@ -13,7 +13,7 @@ finger(i.e. finger_1, etc...).
 			<visual>
 				<origin xyz="0.020 0 0" rpy="0 0 0"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_0.dae" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_0.dae" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="white">
 					<color rgba= "0 0 0 1"/>
@@ -22,7 +22,7 @@ finger(i.e. finger_1, etc...).
 			<collision>	
 				<origin xyz="0.020 0 0" rpy="0 0 0"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_0.STL" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_0.STL" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="yellow">
 					<color rgba="0 1 1 1"/>
@@ -38,14 +38,14 @@ finger(i.e. finger_1, etc...).
 			<visual>
 				<origin xyz="0.050 -.028 0" rpy="0 0 -0.52"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_1.dae" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_1.dae" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="light grey"/>
 			</visual>
 			<collision>
 				<origin xyz="0.050 -.028 0" rpy="0 0 -0.52"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_1.STL" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_1.STL" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -64,14 +64,14 @@ finger(i.e. finger_1, etc...).
 			<visual>
 				<origin xyz="0.039 0 0.0075" rpy="0 0 0"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_2.dae" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_2.dae" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="light grey"/>
 			</visual>
 			<collision>
 				<origin xyz="0.039 0 0.0075" rpy="0 0 0"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_2.STL" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_2.STL" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -85,14 +85,14 @@ finger(i.e. finger_1, etc...).
 			<visual>
 				<origin xyz="0 0 0" rpy="0 0 0.52"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_3.dae" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/link_3.dae" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="light grey"/>
 			</visual>
 			<collision>
 				<origin xyz="0 0 0" rpy="0 0 0.52"/>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_3.STL" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/link_3.STL" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -109,15 +109,15 @@ finger(i.e. finger_1, etc...).
 			<parent link="${prefix}link_0"/>
 			<child link="${prefix}link_1"/>
 			<axis xyz="0 0 1"/>
-			<origin xyz="0.0005 0.01 0" rpy="0 0 0"/>
-			<limit lower="-0.6503" upper="0.3159" effort="100" velocity="100"/>
+			<origin xyz="0.01 0.0 0" rpy="0 0 0"/>
+			<limit lower="-0.6503" upper="1.0" effort="100" velocity="100"/>
 		</joint>
 		<joint name="${prefix}joint_2" type="revolute">
 			<parent link="${prefix}link_1"/>
 			<child link="${prefix}link_2"/>
 			<axis xyz="0 0 1"/>
-			<origin xyz="0.035 -0.025 0" rpy="0 0 -0.52"/>
-			<limit lower="-0.2787" upper="0.5960" effort="100" velocity="100"/>
+			<origin xyz="0.04 -0.025 0" rpy="0 0 -0.52"/>
+			<limit lower="-0.2787" upper="1.0" effort="100" velocity="100"/>
 		</joint>
 		<joint name="${prefix}joint_3" type="fixed">
 			<parent link="${prefix}link_2"/>

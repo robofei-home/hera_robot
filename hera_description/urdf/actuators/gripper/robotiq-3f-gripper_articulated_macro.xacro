@@ -16,7 +16,7 @@ there are multiple hands then a prefix followed by an "_" is needed.
 		<link name="${prefix}palm">
 			<visual>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/palm.dae" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/visual/palm.dae" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="white">
 					<color rgba= "0 0 0 1"/>
@@ -24,7 +24,7 @@ there are multiple hands then a prefix followed by an "_" is needed.
 			</visual>
 			<collision>
 				<geometry>
-                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/palm.STL" scale= "0.6 0.6 0.6" />
+                    <mesh filename="package://hera_description/meshes/gripper_meshes/collision/palm.STL" scale= "0.7 0.7 0.7" />
 				</geometry>
 				<material name="yellow">
 					<color rgba="0 1 1 1"/>
@@ -48,17 +48,17 @@ there are multiple hands then a prefix followed by an "_" is needed.
 		<joint name="${prefix}palm_finger_1_joint" type="fixed">
 			<parent link="${prefix}palm"/>
 			<child link="${prefix}finger_1_link_0"/>
-			<origin xyz="-0.0255 0.005 0.0225" rpy="0 3.1416 -1.57"/>
+			<origin xyz="-0.0255 0.01 0.0225" rpy="0 3.1416 -1.57"/>
 		</joint>
 		<joint name="${prefix}palm_finger_2_joint" type="fixed">
 			<parent link="${prefix}palm"/>
 			<child link="${prefix}finger_2_link_0"/>
-			<origin xyz="-0.0255 0.005 -0.0225" rpy="0 3.1416 -1.57"/>
+			<origin xyz="-0.0255 0.01 -0.0225" rpy="0 3.1416 -1.57"/>
 		</joint>
 		<joint name="${prefix}palm_finger_middle_joint" type="fixed">
 			<parent link="${prefix}palm"/>
 			<child link="${prefix}finger_middle_link_0"/>
-			<origin xyz="0.0255 0.005 0" rpy="0 0 1.57"/>
+			<origin xyz="0.0255 0.01 0" rpy="0 0 1.57"/>
 		</joint>
 		<joint name="${prefix}palm_tool0" type="fixed">
 			<parent link="${prefix}palm"/>
