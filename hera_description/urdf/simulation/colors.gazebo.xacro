@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 
-  <!-- manip colors -->
+  <!-- hera colors -->
   <gazebo reference="base"><material>Gazebo/Black</material></gazebo>
   <gazebo reference="base_wheelFR"><material>Gazebo/White</material></gazebo>
   <gazebo reference="base_wheelFL"><material>Gazebo/White</material></gazebo>
