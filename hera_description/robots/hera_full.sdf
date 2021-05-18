@@ -1,0 +1,1743 @@
+<sdf version='1.6'>
+  <model name='hera'>
+    <link name='base_footprint'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.001516 4e-06 0.109878 0 -0 0</pose>
+        <mass>111.986</mass>
+        <inertia>
+          <ixx>1.88692</ixx>
+          <ixy>-1.2703e-05</ixy>
+          <ixz>-0.0998078</ixz>
+          <iyy>3.23999</iyy>
+          <iyz>-0.000284724</iyz>
+          <izz>3.7595</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.3 0.07</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_1'>
+        <pose frame=''>0.3 0 0.11 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.06 0.09</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_2'>
+        <pose frame=''>-0.3 0 0.11 0 -0 -3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.07</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_3'>
+        <pose frame=''>-0.2 0.205 0.1 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.07</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_4'>
+        <pose frame=''>-0.2 0.205 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_5'>
+        <pose frame=''>-0.2 -0.205 0.1 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.07</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_6'>
+        <pose frame=''>-0.2 -0.205 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_7'>
+        <pose frame=''>0.2 0.205 0.1 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.07</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_8'>
+        <pose frame=''>0.2 0.205 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_9'>
+        <pose frame=''>0.2 -0.205 0.1 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.07</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_10'>
+        <pose frame=''>0.2 -0.205 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_11'>
+        <pose frame=''>-0.1 0 0.41 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.3 0.55</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_12'>
+        <pose frame=''>0.15 0 0.285 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.3 0.3</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_13'>
+        <pose frame=''>-0.06 0 1.11 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.35 0.3 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_14'>
+        <pose frame=''>-0.06 -0.18 0.635 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.13 0.06 1</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_15'>
+        <pose frame=''>-0.06 0.18 0.635 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.13 0.06 1</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__torso_collision_16'>
+        <pose frame=''>0 0 0.135 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/torso.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__encosto_link_collision_17'>
+        <pose frame=''>0.028 0.006671 0.688 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/encosto_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__collision_collision_18'>
+        <pose frame=''>0.1 0 0.495 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.18 0.07</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__suporte_link_collision_19'>
+        <pose frame=''>0.04525 0 0.6635 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/suporte_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__base_link_collision_20'>
+        <pose frame=''>0.316 0 0.693 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_footprint_fixed_joint_lump__base_visual'>
+        <pose frame=''>0 0 0.1 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/base.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_scan_front_visual_1'>
+        <pose frame=''>0.3 0 0.11 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/hokuyo_utm.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_scan_back_visual_2'>
+        <pose frame=''>-0.3 0 0.11 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/hokuyo_urg.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_wheelBL_visual_3'>
+        <pose frame=''>-0.2 0.25 0.1 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/wheelB.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_wheelBR_visual_4'>
+        <pose frame=''>-0.2 -0.25 0.1 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/wheelB.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_wheelFL_visual_5'>
+        <pose frame=''>0.2 0.25 0.1 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/wheelF.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_wheelFR_visual_6'>
+        <pose frame=''>0.2 -0.25 0.1 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/wheelF.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__torso_visual_7'>
+        <pose frame=''>0 0 0.135 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/torso.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__encosto_link_visual_8'>
+        <pose frame=''>0.028 0.006671 0.688 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/encosto_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__xtion_visual_9'>
+        <pose frame=''>0.12 0.025 0.495 1.5708 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/asus_xtion.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__suporte_link_visual_10'>
+        <pose frame=''>0.04525 0 0.6635 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/suporte_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__base_link_visual_11'>
+        <pose frame=''>0.316 0 0.693 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <velocity_decay/>
+      <sensor name='base_scan_front' type='ray'>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>150</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.45</min_angle>
+              <max_angle>1.45</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.08</min>
+            <max>30</max>
+            <resolution>0.01</resolution>
+          </range>
+        </ray>
+        <plugin name='gazebo_ros_base_scan_front_controller' filename='libgazebo_ros_laser.so'>
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>30</updateRate>
+          <topicName>base_scan_front</topicName>
+          <frameName>base_scan_front</frameName>
+        </plugin>
+        <pose frame=''>0.3 0 0.11 0 -0 0</pose>
+      </sensor>
+      <velocity_decay/>
+      <sensor name='base_scan_back' type='ray'>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>150</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.45</min_angle>
+              <max_angle>1.45</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.05</min>
+            <max>5.6</max>
+            <resolution>0.36</resolution>
+          </range>
+        </ray>
+        <plugin name='gazebo_ros_base_scan_back_controller' filename='libgazebo_ros_laser.so'>
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>30</updateRate>
+          <topicName>base_scan_back</topicName>
+          <frameName>base_scan_back</frameName>
+        </plugin>
+        <pose frame=''>-0.3 0 0.11 0 -0 -3.14159</pose>
+      </sensor>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <sensor name='xtion' type='depth'>
+        <always_on>1</always_on>
+        <visualize>1</visualize>
+        <update_rate>30</update_rate>
+        <camera name='__default__'>
+          <horizontal_fov>1.09607</horizontal_fov>
+          <image>
+            <format>R8G8B8</format>
+            <width>32</width>
+            <height>24</height>
+          </image>
+          <clip>
+            <near>0.8</near>
+            <far>3.5</far>
+          </clip>
+        </camera>
+        <plugin name='xtion_camera_controller' filename='libgazebo_ros_openni_kinect.so'>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>30</updateRate>
+          <cameraName>xtion</cameraName>
+          <frameName>xtion_optical</frameName>
+          <depthImageTopicName>depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>depth/points</pointCloudTopicName>
+          <pointCloudCutoff>0.4</pointCloudCutoff>
+          <hackBaseline>0.07</hackBaseline>
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+          <CxPrime>0.0</CxPrime>
+          <Cx>0.0</Cx>
+          <Cy>0.0</Cy>
+          <focalLength>0.0</focalLength>
+        </plugin>
+        <pose frame=''>0.1 0 0.495 0 -0 0</pose>
+      </sensor>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <link name='head'>
+      <pose frame=''>-0.06 0 1.33 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>1.35625e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.35625e-05</iyy>
+          <iyz>0</iyz>
+          <izz>2.1125e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='head_fixed_joint_lump__collision_collision'>
+        <pose frame=''>0 0 -0.165 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.065</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='head_fixed_joint_lump__collision_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.2 0.27</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='head_fixed_joint_lump__collision_collision_2'>
+        <pose frame=''>0.04 -0.13 0.05 0 1.45 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.17</length>
+            <radius>0.02</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='head_fixed_joint_lump__collision_collision_3'>
+        <pose frame=''>0.04 0.13 0.05 0 1.45 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.17</length>
+            <radius>0.02</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='head_visual'>
+        <pose frame=''>0 0 -0.195 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/head.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_torso_to_head' type='revolute'>
+      <child>head</child>
+      <parent>base_footprint</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>0.5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='torso_sensor_plat'>
+      <pose frame=''>0.09 0 1.095 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.000495 0 0.00099 0 -0 0</pose>
+        <mass>1.01</mass>
+        <inertia>
+          <ixx>0.00137401</ixx>
+          <ixy>0</ixy>
+          <ixz>-4.9505e-05</ixz>
+          <iyy>0.000970846</iyy>
+          <iyz>0</iyz>
+          <izz>0.0021275</izz>
+        </inertia>
+      </inertial>
+      <collision name='torso_sensor_plat_fixed_joint_lump__collision_collision'>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.12 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='torso_sensor_plat_fixed_joint_lump__collision_collision_1'>
+        <pose frame=''>0.02 0 0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.07 0.28 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='torso_sensor_plat_visual'>
+        <pose frame=''>0.2 0 -0.2 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/torso_sensor_plat.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='torso_sensor_plat_fixed_joint_lump__kinect_one_visual_1'>
+        <pose frame=''>0.05 -0.01 0.1 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/kinect_one.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>__default__</uri>
+            <name>__default__</name>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <sensor name='kinect_one' type='depth'>
+        <always_on>1</always_on>
+        <visualize>1</visualize>
+        <camera name='__default__'>
+          <horizontal_fov>1.0472</horizontal_fov>
+          <image>
+            <format>R8G8B8</format>
+            <width>1280</width>
+            <height>720</height>
+          </image>
+          <clip>
+            <near>0.4</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <plugin name='{reference}_camera_controller' filename='libgazebo_ros_openni_kinect.so'>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>30</updateRate>
+          <cameraName>kinect_one</cameraName>
+          <frameName>kinect_one_optical</frameName>
+          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <imageTopicName>rgb/image_raw</imageTopicName>
+          <depthImageTopicName>depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>depth/points</pointCloudTopicName>
+          <pointCloudCutoff>0.4</pointCloudCutoff>
+          <hackBaseline>0.07</hackBaseline>
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+          <CxPrime>0.0</CxPrime>
+          <Cx>0.0</Cx>
+          <Cy>0.0</Cy>
+          <focalLength>0.0</focalLength>
+        </plugin>
+        <pose frame=''>0.05 0 0.1 0 -0 0</pose>
+      </sensor>
+    </link>
+    <joint name='joint_torso_to_torso_sensor_plat' type='revolute'>
+      <child>torso_sensor_plat</child>
+      <parent>base_footprint</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>1.57</upper>
+          <effort>30</effort>
+          <velocity>0.5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link_1'>
+      <pose frame=''>0.3315 0 0.73815 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.010403 0 0.016966 0 -0 0</pose>
+        <mass>0.0289103</mass>
+        <inertia>
+          <ixx>2.12285e-05</ixx>
+          <ixy>2.48129e-12</ixy>
+          <ixz>-1.76897e-06</ixz>
+          <iyy>1.25993e-05</iyy>
+          <iyz>3.20548e-12</iyz>
+          <izz>2.59553e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link_1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_1' type='revolute'>
+      <child>link_1</child>
+      <parent>base_footprint</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>8</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link_2'>
+      <pose frame=''>0.3795 0 0.761 7e-06 -1.14159 -7e-06</pose>
+      <inertial>
+        <pose frame=''>0.010403 0 0.016966 0 -0 0</pose>
+        <mass>0.611797</mass>
+        <inertia>
+          <ixx>2.12285e-05</ixx>
+          <ixy>2.48129e-12</ixy>
+          <ixz>-1.76897e-06</ixz>
+          <iyy>1.25993e-05</iyy>
+          <iyz>3.20548e-12</iyz>
+          <izz>2.59553e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_2_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link_2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_2' type='revolute'>
+      <child>link_2</child>
+      <parent>link_1</parent>
+      <axis>
+        <xyz>1e-06 1 3e-06</xyz>
+        <limit>
+          <lower>-2.355</lower>
+          <upper>3.14</upper>
+          <effort>8</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link_3'>
+      <pose frame=''>0.439384 -0 0.891848 7e-06 -1.14159 -7e-06</pose>
+      <inertial>
+        <pose frame=''>0.010403 0 0.016966 0 -0 0</pose>
+        <mass>0.0289103</mass>
+        <inertia>
+          <ixx>2.12285e-05</ixx>
+          <ixy>2.48129e-12</ixy>
+          <ixz>-1.76897e-06</ixz>
+          <iyy>1.25993e-05</iyy>
+          <iyz>3.20548e-12</iyz>
+          <izz>2.59553e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_3_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link_3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_3' type='revolute'>
+      <child>link_3</child>
+      <parent>link_2</parent>
+      <axis>
+        <xyz>0.416147 -3e-06 0.909297</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>8</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link_4'>
+      <pose frame=''>0.492539 -0 0.89265 8.4e-05 -1.53429 -8.4e-05</pose>
+      <inertial>
+        <pose frame=''>0.010403 0 0.016966 0 -0 0</pose>
+        <mass>0.611797</mass>
+        <inertia>
+          <ixx>2.12285e-05</ixx>
+          <ixy>2.48129e-12</ixy>
+          <ixz>-1.76897e-06</ixz>
+          <iyy>1.25993e-05</iyy>
+          <iyz>3.20548e-12</iyz>
+          <izz>2.59553e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_4_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_4_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link_4_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_4.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_4' type='revolute'>
+      <child>link_4</child>
+      <parent>link_3</parent>
+      <axis>
+        <xyz>-1e-06 -1 -3e-06</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>1.0078</upper>
+          <effort>8</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link_5'>
+      <pose frame=''>0.49779 -1e-06 1.03645 8.4e-05 -1.53429 -8.4e-05</pose>
+      <inertial>
+        <pose frame=''>0.011343 -0 0 0 -0 0</pose>
+        <mass>0.0368976</mass>
+        <inertia>
+          <ixx>1.95927e-05</ixx>
+          <ixy>7.26329e-21</ixy>
+          <ixz>-2.5411e-21</ixz>
+          <iyy>7.36985e-06</iyy>
+          <iyz>8.60646e-21</iyz>
+          <izz>2.02402e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_5_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_5_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link_5_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_5.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_5' type='revolute'>
+      <child>link_5</child>
+      <parent>link_4</parent>
+      <axis>
+        <xyz>0.036496 -3e-06 0.999334</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>8</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link_6'>
+      <pose frame=''>0.499208 -1e-06 1.07528 3.14158 -1.2146 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.050315 0.001771 0.000224 0 -0 0</pose>
+        <mass>0.632628</mass>
+        <inertia>
+          <ixx>0.0302925</ixx>
+          <ixy>-9.71946e-07</ixy>
+          <ixz>-8.2077e-06</ixz>
+          <iyy>0.00285515</iyy>
+          <iyz>2.65458e-07</iyz>
+          <izz>0.00355647</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_6_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.1 0.1 0.1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_6_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='link_6_fixed_joint_lump__palm_collision_1'>
+        <pose frame=''>0.078 0 0 0 0 -1.57</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/palm.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='link_6_fixed_joint_lump__finger_1_link_0_collision_2'>
+        <pose frame=''>0.10798 0.02554 0.0225 -3.14159 -7e-06 0.001593</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_0.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='link_6_fixed_joint_lump__finger_2_link_0_collision_3'>
+        <pose frame=''>0.10798 0.02554 -0.0225 -3.14159 -7e-06 0.001593</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_0.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='link_6_fixed_joint_lump__finger_middle_link_0_collision_4'>
+        <pose frame=''>0.10802 -0.025492 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_0.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link_6_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.1 0.1 0.1</scale>
+            <uri>model://hera_description/meshes/manip_meshes/link_6.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='link_6_fixed_joint_lump__palm_visual_1'>
+        <pose frame=''>0.078 0 0 0 0 -1.57</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/palm.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='link_6_fixed_joint_lump__finger_1_link_0_visual_2'>
+        <pose frame=''>0.10798 0.02554 0.0225 -3.14159 -7e-06 0.001593</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_0.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='link_6_fixed_joint_lump__finger_2_link_0_visual_3'>
+        <pose frame=''>0.10798 0.02554 -0.0225 -3.14159 -7e-06 0.001593</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_0.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='link_6_fixed_joint_lump__finger_middle_link_0_visual_4'>
+        <pose frame=''>0.10802 -0.025492 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_0.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_6' type='revolute'>
+      <child>link_6</child>
+      <parent>link_5</parent>
+      <axis>
+        <xyz>-1e-06 -1 -3e-06</xyz>
+        <limit>
+          <lower>-2.6232</lower>
+          <upper>1.8262</upper>
+          <effort>8</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='finger_1_link_1'>
+      <pose frame=''>0.443954 0.025523 1.15926 0.004272 -1.21459 3.13703</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.001859</ixx>
+          <ixy>-0.000376</ixy>
+          <ixz>2.8e-05</ixz>
+          <iyy>0.012756</iyy>
+          <iyz>0</iyz>
+          <izz>0.0024</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_1_link_1_collision'>
+        <pose frame=''>0.05 -0.028 0 0 0 -0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='finger_1_link_1_visual'>
+        <pose frame=''>0.05 -0.028 0 0 0 -0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_1.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='finger_1_joint_1' type='revolute'>
+      <child>finger_1_link_1</child>
+      <parent>link_6</parent>
+      <axis>
+        <xyz>0.937227 -2e-06 0.348719</xyz>
+        <limit>
+          <lower>-0.6503</lower>
+          <upper>1</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='finger_1_link_2'>
+      <pose frame=''>0.430019 0.050586 1.19671 0.929378 -0.948604 2.11621</pose>
+      <inertial>
+        <pose frame=''>0.00975 0 0 0 -0 0</pose>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.003098</ixx>
+          <ixy>-0.000627</ixy>
+          <ixz>4.7e-05</ixz>
+          <iyy>0.013663</iyy>
+          <iyz>0</iyz>
+          <izz>0.00408904</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_1_link_2_collision'>
+        <pose frame=''>0.039 0 0.0075 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='finger_1_link_2_fixed_joint_lump__finger_1_link_3_collision_1'>
+        <pose frame=''>0.039 0 0 0 -0 0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='finger_1_link_2_visual'>
+        <pose frame=''>0.039 0 0.0075 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_2.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='finger_1_link_2_fixed_joint_lump__finger_1_link_3_visual_1'>
+        <pose frame=''>0.039 0 0 0 -0 0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_3.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='finger_1_joint_2' type='revolute'>
+      <child>finger_1_link_2</child>
+      <parent>finger_1_link_1</parent>
+      <axis>
+        <xyz>0.937227 -2e-06 0.348719</xyz>
+        <limit>
+          <lower>-0.2787</lower>
+          <upper>1</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='finger_2_link_1'>
+      <pose frame=''>0.486129 0.025523 1.17495 0.004272 -1.21459 3.13703</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.001859</ixx>
+          <ixy>-0.000376</ixy>
+          <ixz>2.8e-05</ixz>
+          <iyy>0.012756</iyy>
+          <iyz>0</iyz>
+          <izz>0.0024</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_2_link_1_collision'>
+        <pose frame=''>0.05 -0.028 0 0 0 -0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='finger_2_link_1_visual'>
+        <pose frame=''>0.05 -0.028 0 0 0 -0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_1.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='finger_2_joint_1' type='revolute'>
+      <child>finger_2_link_1</child>
+      <parent>link_6</parent>
+      <axis>
+        <xyz>0.937227 -2e-06 0.348719</xyz>
+        <limit>
+          <lower>-0.6503</lower>
+          <upper>1</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='finger_2_link_2'>
+      <pose frame=''>0.472194 0.050586 1.21241 0.929378 -0.948604 2.11621</pose>
+      <inertial>
+        <pose frame=''>0.00975 0 0 0 -0 0</pose>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.003098</ixx>
+          <ixy>-0.000627</ixy>
+          <ixz>4.7e-05</ixz>
+          <iyy>0.013663</iyy>
+          <iyz>0</iyz>
+          <izz>0.00408904</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_2_link_2_collision'>
+        <pose frame=''>0.039 0 0.0075 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='finger_2_link_2_fixed_joint_lump__finger_2_link_3_collision_1'>
+        <pose frame=''>0.039 0 0 0 -0 0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='finger_2_link_2_visual'>
+        <pose frame=''>0.039 0 0.0075 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_2.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='finger_2_link_2_fixed_joint_lump__finger_2_link_3_visual_1'>
+        <pose frame=''>0.039 0 0 0 -0 0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_3.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='finger_2_joint_2' type='revolute'>
+      <child>finger_2_link_2</child>
+      <parent>finger_2_link_1</parent>
+      <axis>
+        <xyz>0.937227 -2e-06 0.348719</xyz>
+        <limit>
+          <lower>-0.2787</lower>
+          <upper>1</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='finger_middle_link_1'>
+      <pose frame=''>0.465027 -0.025493 1.16715 3.14158 -1.2146 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.001859</ixx>
+          <ixy>-0.000376</ixy>
+          <ixz>2.8e-05</ixz>
+          <iyy>0.012756</iyy>
+          <iyz>0</iyz>
+          <izz>0.0024</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_middle_link_1_collision'>
+        <pose frame=''>0.05 -0.028 0 0 0 -0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='finger_middle_link_1_visual'>
+        <pose frame=''>0.05 -0.028 0 0 0 -0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_1.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='finger_middle_joint_1' type='revolute'>
+      <child>finger_middle_link_1</child>
+      <parent>link_6</parent>
+      <axis>
+        <xyz>-0.93723 2e-06 -0.348712</xyz>
+        <limit>
+          <lower>-0.6503</lower>
+          <upper>1</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='finger_middle_link_2'>
+      <pose frame=''>0.451079 -0.050493 1.20464 2.21353 -0.949878 -2.11783</pose>
+      <inertial>
+        <pose frame=''>0.00975 0 0 0 -0 0</pose>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.003098</ixx>
+          <ixy>-0.000627</ixy>
+          <ixz>4.7e-05</ixz>
+          <iyy>0.013663</iyy>
+          <iyz>0</iyz>
+          <izz>0.00408904</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_middle_link_2_collision'>
+        <pose frame=''>0.039 0 0.0075 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='finger_middle_link_2_fixed_joint_lump__finger_middle_link_3_collision_1'>
+        <pose frame=''>0.039 0 0 0 -0 0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/collision/link_3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='finger_middle_link_2_visual'>
+        <pose frame=''>0.039 0 0.0075 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_2.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='finger_middle_link_2_fixed_joint_lump__finger_middle_link_3_visual_1'>
+        <pose frame=''>0.039 0 0 0 -0 0.52</pose>
+        <geometry>
+          <mesh>
+            <scale>0.7 0.7 0.7</scale>
+            <uri>model://hera_description/meshes/gripper_meshes/visual/link_3.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='finger_middle_joint_2' type='revolute'>
+      <child>finger_middle_link_2</child>
+      <parent>finger_middle_link_1</parent>
+      <axis>
+        <xyz>-0.93723 2e-06 -0.348712</xyz>
+        <limit>
+          <lower>-0.2787</lower>
+          <upper>1</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'/>
+    <plugin name='base_controller' filename='libgazebo_ros_planar_move.so'>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>100.0</odometryRate>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/kinect</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+    <static>0</static>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/manip</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </model>
+</sdf>

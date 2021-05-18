@@ -129,4 +129,101 @@
   <!-- manip_plugin -->
   <xacro:gazebo_manip/>
 
+<!-- ####################################################################### -->
+<!-- ####################### gazebo sensors #################################-->
+<!-- ####################################################################### -->
+
+  <gazebo reference="link_6">
+    <turnGravityOff>true</turnGravityOff>
+    <selfCollide>false</selfCollide>
+    <sensor type="contact" name="palm_contactsensor_sensor">
+      <update_rate>100.0</update_rate>
+      <contact>
+        <collision>link_6_fixed_joint_lump__palm_collision_1</collision>
+      </contact>
+      <plugin name="palm_plugin" filename="libgazebo_ros_bumper.so">
+        <alwaysOn>true</alwaysOn>
+        <frameName>link_6</frameName>
+        <updateRate>100.0</updateRate>
+        <bumperTopicName>link_6_bumper</bumperTopicName>
+      </plugin>
+    </sensor>
+    <mu1 value="500.0" />
+    <mu2 value="500.0" />
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+  </gazebo>
+
+<!--FINGER MIDDLE LINK 3 SENSOR-->
+
+  <gazebo reference="finger_middle_link_3">
+    <turnGravityOff>true</turnGravityOff>
+    <selfCollide>false</selfCollide>
+    <sensor type="contact" name="finger_middle_link_3_contactsensor_sensor">
+      <update_rate>100.0</update_rate>
+      <contact>
+        <collision>finger_middle_link_3_collision</collision>
+      </contact>
+      <plugin name="finger_middle_link_3_plugin" filename="libgazebo_ros_bumper.so">
+        <alwaysOn>true</alwaysOn>
+        <frameName>finger_middle_link_3</frameName>
+        <updateRate>100.0</updateRate>
+        <bumperTopicName>finger_middle_link_3_bumper</bumperTopicName>
+      </plugin>
+    </sensor>
+    <mu1 value="500.0" />
+    <mu2 value="500.0" />
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+    <provideFeedback value="true"/>
+  </gazebo>
+
+<!--FINGER 2 LINK 3 SENSOR-->
+
+  <gazebo reference="base_wheelFL">
+    <turnGravityOff>true</turnGravityOff>
+    <selfCollide>false</selfCollide>
+    <sensor type="contact" name="base_wheelFL_contactsensor_sensor">
+      <update_rate>100.0</update_rate>
+      <contact>
+        <collision>base_wheelFL_collision</collision>
+      </contact>
+      <plugin name="base_wheelFL_plugin" filename="libgazebo_ros_bumper.so">
+        <alwaysOn>true</alwaysOn>
+        <frameName>base_wheelFL</frameName>
+        <updateRate>100.0</updateRate>
+        <bumperTopicName>base_wheelFL_bumper</bumperTopicName>
+      </plugin>
+    </sensor>
+    <mu1 value="500.0" />
+    <mu2 value="500.0" />
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+    <provideFeedback value="true"/>
+  </gazebo>
+
+  <!--FINGER 1 LINK 3 SENSOR-->
+
+  <gazebo reference="finger_1_link_3">
+    <turnGravityOff>true</turnGravityOff>
+    <selfCollide>false</selfCollide>
+    <sensor type="contact" name="finger_1_link_3_contactsensor_sensor">
+      <update_rate>100.0</update_rate>
+      <contact>
+        <collision>finger_1_link_2_fixed_joint_lump__finger_1_link_3_collision_1</collision>
+      </contact>
+      <plugin name="finger_1_link_3_plugin" filename="libgazebo_ros_bumper.so">
+        <alwaysOn>true</alwaysOn>
+        <frameName>finger_1_link_3</frameName>
+        <updateRate>100.0</updateRate>
+        <bumperTopicName>finger_1_link_3_bumper</bumperTopicName>
+      </plugin>
+    </sensor>
+    <mu1 value="500.0" />
+    <mu2 value="500.0" />
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+    <provideFeedback value="true"/>
+  </gazebo>
+
 </robot>
