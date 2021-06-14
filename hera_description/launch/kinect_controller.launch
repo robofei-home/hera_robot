@@ -8,12 +8,12 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-	output="screen" ns="/kinect" args="joint_state_controller
+	output="screen" ns="/kinect" args="kinect_state_controller
                       kinect_position_controller
                       "/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+  <node name="kinect_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
 	respawn="false" output="screen">
     <remap from="/joint_states" to="/kinect/joint_states" />
   </node>
