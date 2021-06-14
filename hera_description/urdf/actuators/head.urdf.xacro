@@ -59,7 +59,7 @@
       </visual>
     </link>
 
-    <joint name="joint_${parent}_to_${name}" type="revolute">
+    <joint name="joint_${parent}_to_${name}" type="fixed">
       <origin xyz="-0.06 0 ${(pole_size_z/2)+(head_base_length)+(head_box_size_z/2)}" rpy="0 0 0"/>
       <child link="${name}"/>
       <parent link="${parent}"/>
@@ -67,7 +67,7 @@
       <limit effort="${head_effort}" velocity="${head_velocity}" lower="-${M_PI/2}" upper="${M_PI/2}"/>
     </joint>
 
-    <transmission name="tran_${name}">
+    <!-- <transmission name="tran_${name}">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="joint_${parent}_to_${name}">
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -76,7 +76,7 @@
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
-    </transmission>
+    </transmission> -->
 
   </xacro:macro>
 </robot>
