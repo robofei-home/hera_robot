@@ -8,7 +8,7 @@
   <arg name="enable_gazebo"          default="true"/>
   <arg name="enable_teleop"          default="true"/>
   <arg name="enable_check_collision" default="true"/>
-  
+
 
   <!-- use rviz -->
   <group if="$(arg enable_rviz)">
@@ -17,7 +17,9 @@
   </group>
 
   <!-- use gazebo -->
+  <env name="GAZEBO_MODEL_PATH" value="$GAZEBO_MODEL_PATH:$(find social_worlds)/models/:$(find social_worlds)/models/3dparty/"/>
   <group if="$(arg enable_gazebo)">
+  
     <!-- gazebo -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
     <!-- load hera description -->

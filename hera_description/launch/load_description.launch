@@ -4,13 +4,11 @@
   <arg name="robot_model" default="hera_full"/>
 
   <arg name="robot_name" 	default="robot"/>
-  <arg name="init_pos_x" 	default="0.0"/>
-  <arg name="init_pos_y" 	default="0.0"/>
-  <arg name="init_pos_z" 	default="0.0"/>
-  <arg name="init_yaw"   	default="0.0"/>
-
+  <arg name="init_pos_x" 	default="-2.250574"/>
+  <arg name="init_pos_y" 	default="3.592245"/>
+  <arg name="init_pos_z" 	default="0.005000"/>
+  <arg name="init_yaw"   	default="-1.546853"/>
   <arg name="use_jsp_gui" default="false"/>
-
   <!-- load robot_description -->
   <param name="robot_description"
     command="$(find xacro)/xacro $(find hera_description)/robots/$(arg robot_model).urdf.xacro"/>
